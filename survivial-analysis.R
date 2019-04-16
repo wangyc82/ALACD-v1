@@ -1,6 +1,6 @@
 # this procedure is for survival analysis for expression level of lncrna, and TCGAbiolinks clinical data
 # taken BRCA patients as an example
-load("lncrna-count-BRCA-diffLncRNA.RData")
+load("BRCA-example.RData")
 
 rm(list=setdiff(ls(),c("lncRNA_ldata_BRCA")))
 BRCAT2.9_exp<-lncRNA_ldata_BRCA["BRCAT2.9",]
