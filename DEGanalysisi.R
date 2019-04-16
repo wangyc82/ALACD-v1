@@ -2,7 +2,7 @@
 
 library(limma)
 
-load("lncrna-count-BRCA-diffLncRNA.RData")
+load("BRCA-example.RData")
 # lncrna_ldata_NAcancer is the control data including all tissue aside by tumor
 nldata<-cbind(lncRNA_ldata_BRCA,lncrna_ldata_NAcancer)
 a<-rep(c("tumor","normal"),c(ncol(lncRNA_ldata_BRCA)),ncol(lncrna_ldata_NAcancer))
