@@ -6,4 +6,4 @@ crossvalSVM.R and getperf.R are for SVM cross-validtion and generating the evlua
 It also includes the DEGanalysis.R for differential expression analysis, and
 survival-analysis.R for surivival analysis of lncRNAs.
 
-The example data is BRCA-example
+The example data for running the ALACD (BRCA-example.RData) is available at https://mail.cstnet.cn/coremail/XT3/nf/doGetFile.jsp?mid=7%3a1tbiBwMCBllo9S9XCwAAs3&sid=SAghVAOOLPeXIIzjkJOOpTGMHWwkWpOf
