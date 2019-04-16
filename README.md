@@ -6,4 +6,4 @@ crossvalSVM.R and getperf.R are for SVM cross-validtion and generating the evlua
 It also includes the DEGanalysis.R for differential expression analysis, and
 survival-analysis.R for surivival analysis of lncRNAs.
 
-The example data
+The example data is BRCA-example
