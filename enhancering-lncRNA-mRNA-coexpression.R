@@ -1,10 +1,14 @@
 # this procedure is to generate intital relationships between lncRNA and mRNA based on their correlation analysis
 # taken BRCA TCGA patients as an example
-load("lncRNA-count-BRCA-match.RData")
-rm(list=setdiff(ls(),c("lncRNA_ldata_BRCA","GExp_match","corMat")))
-#corMat is correlation matrix between lncRNA (row) and mRNA (column)
-#lncRNA_ldata_BRCA_match is expression profiles of lncRNAs across BRCA tumors in TCGA
+load("BRCA-example.RData")
+
+#lncRNA_ldata_BRCA is expression profiles of lncRNAs across BRCA tumors in TCGA
 #GExp_match is expression profiles of mRNAs across same BRCA tumors in TCGA
+
+#creat coexpression matrix
+M<-rbind(lncRNA_ldata_BRCA,GExp_match)
+CC<-cor(M)
+corMat<-CC[1:nrow(lncRNA_ldata_BRCA),(nrow(lncRNA_ldata_BRCA)+1):nrow(CC));
 corVec<-as.vector(corMat)
 corVec<-abs(corVec)
 
