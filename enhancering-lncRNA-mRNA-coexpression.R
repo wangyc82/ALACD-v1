@@ -6,7 +6,7 @@ load("BRCA-example.RData")
 #GExp_match is expression profiles of mRNAs across same BRCA tumors in TCGA
 
 #creat coexpression matrix
-M<-rbind(lncRNA_ldata_BRCA,GExp_match)
+M<-cbind(t(lncRNA_ldata_BRCA),t(GExp_match))
 CC<-cor(M)
 corMat<-CC[1:nrow(lncRNA_ldata_BRCA),(nrow(lncRNA_ldata_BRCA)+1):nrow(CC));
 corVec<-as.vector(corMat)
