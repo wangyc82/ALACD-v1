@@ -7,3 +7,9 @@ It also includes the DEGanalysis.R for differential expression analysis, and
 survival-analysis.R for surivival analysis of lncRNAs.
 
 The example data for running the ALACD is BRCA-example.RData.
+
+#geting the re-learned lncRNA-gene coexpression associations by using the following
+preLGA<-enhancering-lncRNA-mRNA-coexpression(lncRNA-exp,Gene-exp)
+#lncRNA-exp and Gene-exp can be obtained from BRCA-example.RData
+#geting the optimum overlap gene by calling optimizing.R
+overlap_gene<-
