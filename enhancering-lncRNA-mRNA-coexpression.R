@@ -1,5 +1,6 @@
 # this procedure is to generate intital relationships between lncRNA and mRNA based on their correlation analysis
 # taken BRCA TCGA patients as an example
+preCOR<-function(lncRNA_ldata_BRCA,Exp_match) {
 load("BRCA-example.RData")
 
 #lncRNA_ldata_BRCA is expression profiles of lncRNAs across BRCA tumors in TCGA
@@ -36,7 +37,7 @@ Ylab<-c(rep("a",nrow(A)),rep("b",nrow(B)))
 
 source('crossvalSVM.R')
 crossV<-crossvalSVM(X,Ylab,10,10,0.001)
-source('~getperf.R')
+source('getperf.R')
 perf<-getperf(crossV[[1]],crossV[[2]])
 
 
@@ -131,3 +132,5 @@ for (k in 1:10000) {
 }
 
 preCOR<-matrix(prdY,nL,nG)
+return(preCOR)
+}
