@@ -9,18 +9,3 @@ f<-function(d,C,P) sum(abs(C)*unlist(lapply(1:length(C),function(x) sum(unlist(l
 opt<-nlm(f,rep(0,ncol(P)),C,P)
 
 optim_d<-opt$estimate
-
-load("~/Documents/CMAP02/drugWith10-binary test results.RData")
-overlap_gene<-intersect(colnames(corMat_P),GeneSymbol_Pscore)
-
-corP<-t(corMat_P[,overlap_gene])
-
-#for drug estradiol
-l<-Pscore[[2]]
-names(l)<-GeneSymbol_Pscore
-Cdg<-l[overlap_gene]
-
-load("~/Documents/CMAP02/drugWith10-correlation test results.RData")
-overlap_gene1<-intersect(colnames(corMat_S),GEmat_GeneSymbol)
-l<-unlist(lapply(1:length(overlap_gene),function(x) identical(overlap_gene[x],overlap_gene1[x])))
-length(which(l=="TRUE"))
