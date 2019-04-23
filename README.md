@@ -9,7 +9,16 @@ survival-analysis.R for surivival analysis of lncRNAs.
 The example data for running the ALACD is BRCA-example.RData.
 
 #geting the re-learned lncRNA-gene coexpression associations by using the following
+
 preLGA<-enhancering-lncRNA-mRNA-coexpression(lncRNA-exp,Gene-exp)
+
 #lncRNA-exp and Gene-exp can be obtained from BRCA-example.RData
+
+
 #geting the optimum overlap gene by calling optimizing.R
-overlap_gene<-
+
+overlap_gene<-optimizatiing(C,P)
+
+#C is the drug-gene coefficients, and can be ontained from drug-gene coefficients.RData
+#P is predicted lncRNA-gene associations, and is obtained by enhancering-lncRNA-mRNA-coexpression.R
+
